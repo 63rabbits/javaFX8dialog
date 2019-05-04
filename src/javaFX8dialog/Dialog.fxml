@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaFX8dialog.DialogController">
+  <children>
+    <GridPane alignment="CENTER" layoutX="20.0" layoutY="20.0" prefWidth="-1.0">
+      <children>
+        <Label text="message :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="detail : " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label text="type : " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label prefWidth="-1.0" text="response : " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="txfMessage" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="txfDetail" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="txfResponse" editable="false" prefWidth="200.0" style="-fx-background-color: beige;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <HBox alignment="CENTER_LEFT" prefHeight="-1.0" prefWidth="-1.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+          <children>
+            <Button fx:id="btnInfo" mnemonicParsing="false" onAction="#btnInfoOnAction" prefWidth="80.0" text="info." />
+            <Button fx:id="btnQuestion" mnemonicParsing="false" onAction="#btnQuestionOnAction" prefWidth="80.0" text="question" />
+            <Button fx:id="btnWarning" mnemonicParsing="false" onAction="#btnWarningOnAction" prefWidth="80.0" text="warning" />
+            <Button fx:id="btnError" mnemonicParsing="false" onAction="#btnErrorOnAction" prefWidth="80.0" text="error" />
+          </children>
+        </HBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="76.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="346.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>
